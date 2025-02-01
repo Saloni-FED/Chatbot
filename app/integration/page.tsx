@@ -110,11 +110,11 @@ export default function IntegrationPage() {
                 <Button
                   onClick={() => setShowDemoChat(true)}
                   variant="secondary"
-                  className="bg-secondary hover:bg-secondary-dark text-white"
+                  className="bg-secondary hover:bg-secondary-dark text-slate-500"
                   whileHover={buttonHover}
                   whileTap={buttonTap}
                 >
-                  <MessageSquare className="mr-2 h-4 w-4" />
+                  <MessageSquare className="mr-2 h-4 w-4 " />
                   Test Chatbot
                 </Button>
               </motion.div>
@@ -144,7 +144,7 @@ export default function IntegrationPage() {
                     <Button
                       onClick={() => navigator.clipboard.writeText(integrationCode)}
                       variant="outline"
-                      className="border-primary hover:bg-primary/5"
+                      className="border-primary hover:bg-primary/5 text-slate-500"
                       whileHover={buttonHover}
                       whileTap={buttonTap}
                     >
@@ -153,6 +153,7 @@ export default function IntegrationPage() {
                     </Button>
                   </TabsContent>
                   <TabsContent value="email" className="space-y-4">
+                    <div className="block md:hidden"></div>
                     <p className="text-sm text-muted-foreground">
                       Send the integration instructions to your developer:
                     </p>
@@ -205,7 +206,7 @@ export default function IntegrationPage() {
         <DialogContent className="sm:max-w-[90vw] h-[90vh] p-0">
           {/* Feedback Topbar */}
           <motion.div
-            className="w-full bg-primary/5 border-b px-6 py-2"
+            className="w-full  bg-primary/5 border-b px-6 py-2"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -248,7 +249,7 @@ export default function IntegrationPage() {
               >
                 Welcome to our website
               </motion.h1>
-              <motion.p variants={fadeIn} className="text-lg text-muted-foreground mb-8">
+              <motion.p variants={fadeIn} className="text-lg text-muted-foreground mb-8 ">
                 This is how your website will look with the chatbot integration. The chatbot will appear in the bottom
                 right corner.
               </motion.p>
@@ -256,14 +257,14 @@ export default function IntegrationPage() {
               <motion.div variants={staggerChildren} className="grid md:grid-cols-2 gap-8">
                 <motion.div variants={slideIn} className="space-y-4">
                   <h2 className="text-2xl font-semibold text-primary">Our Products</h2>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground sm:text-base">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua.
                   </p>
                 </motion.div>
                 <motion.div variants={slideIn} className="space-y-4">
-                  <h2 className="text-2xl font-semibold text-primary">About Us</h2>
-                  <p className="text-muted-foreground">
+                  <h2 className="text-2xl font-semibold text-primary sm:text-base">About Us</h2>
+                  <p className="text-muted-foreground sm:text-base">
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                     consequat.
                   </p>
@@ -350,7 +351,7 @@ export default function IntegrationPage() {
                     whileHover={buttonHover}
                     whileTap={buttonTap}
                   >
-                    <a href="/admin" target="_blank" rel="noopener noreferrer">
+                    <a href="/" target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="mr-2 h-5 w-5" />
                       Explore Admin Panel
                     </a>
@@ -358,7 +359,7 @@ export default function IntegrationPage() {
                   <Button
                     variant="secondary"
                     size="lg"
-                    className="bg-secondary hover:bg-secondary-dark text-white"
+                    className="bg-secondary hover:bg-secondary-dark text-slate-500"
                     whileHover={buttonHover}
                     whileTap={buttonTap}
                   >
