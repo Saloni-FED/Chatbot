@@ -156,7 +156,7 @@ export default function RegistrationPage() {
                   </div>
 
                   <Button
-                    variant="outline"
+                    variant="secondary"
                     className="w-full"
                     type="button"
                     onClick={handleGoogleSignIn}
