@@ -12,7 +12,7 @@ A modern, user-friendly platform for integrating AI-powered chatbots into your w
 - **Effects:** Canvas Confetti
 
 ## 🔗 Demo
- [Chatbot]("https://chatbot-61xpffefp-salonis-projects.vercel.app/")
+ ![Chatbot](https://chatbot-61xpffefp-salonis-projects.vercel.app/)
 
 ## 📦 Installation
 
