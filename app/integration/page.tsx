@@ -203,7 +203,7 @@ export default function IntegrationPage() {
 
       {/* Website Preview Dialog */}
       <Dialog open={showDemoChat} onOpenChange={setShowDemoChat}>
-        <DialogContent className="sm:max-w-[90vw] h-[90vh] p-0">
+        <DialogContent className="sm:max-w-[90vw] lg:h-[70vh] h-[90vh] p-0">
           {/* Feedback Topbar */}
           <motion.div
             className="w-full  bg-primary/5 border-b px-6 py-2"
@@ -216,7 +216,7 @@ export default function IntegrationPage() {
                 <AlertTriangle className="h-4 w-4 text-warning" />
                 <span className="text-sm">Chatbot not working as intended?</span>
               </div>
-              <a href="/feedback" className="text-sm text-primary hover:text-primary-dark underline transition-colors">
+              <a href="/integration" className="text-sm text-primary hover:text-primary-dark underline transition-colors">
                 Share feedback
               </a>
             </div>
