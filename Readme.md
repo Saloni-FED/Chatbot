@@ -2,8 +2,6 @@
 
 A modern, user-friendly platform for integrating AI-powered chatbots into your website. Built with Next.js 14, React, and Tailwind CSS.
 
-![BeyondChats Preview](https://v0.dev/placeholder.svg?height=400&width=800)
-
 ## 🚀 Tech Stack
 
 - **Framework:** Next.js 14 with App Router
