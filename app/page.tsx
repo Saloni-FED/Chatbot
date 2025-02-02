@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label"
 import { ProgressSteps } from "@/components/progress-steps"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Loader2, Mail, AlertCircle } from "lucide-react"
+import { useRouter } from "next/navigation"
 
 const steps = [
   {
@@ -27,6 +28,7 @@ const steps = [
 type RegistrationStep = "form" | "verification" | "complete"
 
 export default function RegistrationPage() {
+  const router = useRouter()
   const [step, setStep] = useState<RegistrationStep>("form")
   const [email, setEmail] = useState("")
   const [isLoading, setIsLoading] = useState(false)
@@ -61,7 +63,7 @@ export default function RegistrationPage() {
       if (verificationCode === "123456") {
         // In real app, verify against API
         setStep("complete")
-        window.location.href = "/organization" // Redirect to next step
+        router.push("/organization") // Redirect to next step
       } else {
         setError("Invalid verification code. Please try again.")
       }
@@ -95,7 +97,7 @@ export default function RegistrationPage() {
           <CardTitle>Create your account</CardTitle>
           <CardDescription>
             {step === "verification"
-              ? "Enter the verification code sent to your email"
+              ? "Enter the verification code sent to your email Use Dummy (123456)"
               : "Enter your details to get started with BeyondChats"}
           </CardDescription>
         </CardHeader>
@@ -156,7 +158,7 @@ export default function RegistrationPage() {
                   </div>
 
                   <Button
-                    variant="secondary"
+                    variant="outline"
                     className="w-full"
                     type="button"
                     onClick={handleGoogleSignIn}

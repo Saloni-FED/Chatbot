@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { ProgressSteps } from "@/components/progress-steps"
 import { Loader2, Globe, CheckCircle, Clock, AlertCircle } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { useRouter } from "next/navigation"
 
 interface WebpageStatus {
   url: string
@@ -23,6 +24,7 @@ interface MetaDescription {
 }
 
 export default function OrganizationPage() {
+  const router = useRouter()
   const [webpages, setWebpages] = useState<WebpageStatus[]>([])
   const [isScrapingInProgress, setIsScrapingInProgress] = useState(false)
   const [selectedWebpage, setSelectedWebpage] = useState<WebpageStatus | null>(null)
@@ -163,7 +165,7 @@ export default function OrganizationPage() {
               <div className="flex items-center justify-between">
                 <h3 className="font-medium">Website Analysis Status</h3>
                 {webpages.some((page) => page.status === "completed") && (
-                  <Button variant="outline" size="sm" onClick={() => (window.location.href = "/integration")}>
+                  <Button variant="outline" size="sm" onClick={() => (router.push('/integration'))}>
                     Continue to Integration
                   </Button>
                 )}
